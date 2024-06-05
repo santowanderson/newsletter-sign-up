@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
 import './success.css';
@@ -9,19 +9,21 @@ function Success() {
   const navigate = useNavigate();
 
   return (
-    <section>
+    <section id="success-container">
       <IoIosCheckmarkCircle />
 
-      <h1>Thanks for subscribing!</h1>
+      <h1 className="title">Thanks for subscribing!</h1>
 
-      <p>
+      <p className="text-content">
         A confirmation email has been sent to <span>ash@loremcompany.com.</span>{' '}
         Please open it and click the button inside to confirm your subscription.
       </p>
 
-      <Button buttonType="button" handleClick={() => navigate('/')}>
-        Dismiss message
-      </Button>
+      <div className="button-container">
+        <Button buttonType="button" handleClick={() => navigate('/')}>
+          Dismiss message
+        </Button>
+      </div>
     </section>
   );
 }

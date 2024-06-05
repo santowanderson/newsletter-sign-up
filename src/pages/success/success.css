@@ -1,0 +1,25 @@
+#success-container {
+  padding: 0 20px;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+#success-container > svg {
+  font-size: var(--fs-64);
+  color: var(--tomato);
+}
+
+.text-content > span { font-weight: 700; }
+
+.button-container {
+  position: absolute;
+  bottom: var(--padding-30);
+  left: 0;
+  right: 0;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+}

@@ -1,0 +1,13 @@
+#button {
+  padding: var(--padding-16);
+  border-radius: var(--rounded-8);
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#button:hover {
+  background: var(--tomato-gradient);
+  box-shadow: var(--tomato-shadow);
+}

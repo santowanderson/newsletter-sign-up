@@ -4,7 +4,7 @@ import './button.css';
 
 function Button({ buttonType, children, handleClick }) {
   return (
-    <button onClick={handleClick} type={buttonType}>
+    <button onClick={handleClick} type={buttonType} id="button">
       {children}
     </button>
   );
