@@ -52,4 +52,16 @@ body {
   font-family: var(--roboto);
   font-size: var(--fs-16);
   color: var(--dark-slate-grey);
+  min-width: 375px;
+}
+
+@media screen and (min-width: 1024px) {
+
+  main {
+    background-color: var(--charcoal-grey);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -10,14 +10,17 @@ function Success() {
 
   return (
     <section id="success-container">
-      <IoIosCheckmarkCircle />
+      <div className="content-container">
+        <IoIosCheckmarkCircle />
 
-      <h1 className="title">Thanks for subscribing!</h1>
+        <h1 className="title">Thanks for subscribing!</h1>
 
-      <p className="text-content">
-        A confirmation email has been sent to <span>ash@loremcompany.com.</span>{' '}
-        Please open it and click the button inside to confirm your subscription.
-      </p>
+        <p className="text-content">
+          A confirmation email has been sent to{' '}
+          <span>ash@loremcompany.com.</span> Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+      </div>
 
       <div className="button-container">
         <Button buttonType="button" handleClick={() => navigate('/')}>

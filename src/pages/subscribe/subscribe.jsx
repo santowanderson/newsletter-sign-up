@@ -1,26 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
-import { Form, redirect, useActionData } from 'react-router-dom';
 
 import './subscribe.css';
 import mobileImage from '../../assets/images/illustration-sign-up-mobile.svg';
 import desktopImage from '../../assets/images/illustration-sign-up-desktop.svg';
 import Button from '../../components/button/button';
+import { Form, redirect } from 'react-router-dom';
 
-export async function action({ request }) {
-  const formData = await request.formData();
-  const email = formData.get('email');
-  const emailValidation = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (emailValidation.test(email)) {
-    throw redirect(`/success?email=${email}`);
-  }
-  return 'Valid email required';
+export function action() {
+  return redirect('/success');
 }
 
 function Subscribe() {
-  const md = useMediaQuery('(min-width: 768px)');
-  const actionData = useActionData();
+  const md = useMediaQuery('(min-width: 1024px)');
+  console.log(md);
 
   return (
     <section id="subscribe-container">
@@ -51,15 +45,15 @@ function Subscribe() {
         <Form method="post">
           <div className="label-container">
             <label>Email address</label>
-            {/* {formErrorMessage && (
-              <h3 className="form-error-message">{formErrorMessage}</h3>
+            {/* {inputErrorMensage && (
+              <h3 className="form-error-message">{inputErrorMensage}</h3>
             )} */}
           </div>
           <input
             type="email"
             name="email"
+            onChange={(e) => setInputValue(e.target.value)}
             autoComplete="off"
-            required
             placeholder="email@company.com"
           />
           <Button buttonType="submit">Subscribe to monthly newsletter</Button>

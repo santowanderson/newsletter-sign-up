@@ -5,11 +5,13 @@
 .subscribe-content-container { padding: 0 20px; }
 
 .title {
-  font-size: var(--fs-32);
+  font-size: 40px;
   margin: 20px 0;
 }
 
-.list-container { margin: 20px 0; }
+.list-container {
+  margin: 20px 0 30px 0;
+}
 
 .list-container li {
   display: flex;
@@ -46,11 +48,29 @@ form > input {
   margin-bottom: 20px;
 }
 
-form > input:focus:invalid {
+.invalid-input:focus:invalid {
   border-color: var(--tomato);
   background-color: rgba(255, 98, 87, 20%);
 }
 
-form > input:invalid:focus::placeholder {
+.invalid-input:invalid:focus::placeholder {
   color: var(--tomato);
+}
+
+@media screen and (min-width: 1024px) {
+
+  #subscribe-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 1.5rem;
+    max-width: 830px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
 }
