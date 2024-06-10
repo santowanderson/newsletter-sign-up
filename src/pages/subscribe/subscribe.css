@@ -4,11 +4,6 @@
 
 .subscribe-content-container { padding: 0 20px; }
 
-.title {
-  font-size: 40px;
-  margin: 20px 0;
-}
-
 .list-container {
   margin: 20px 0 30px 0;
 }
@@ -68,9 +63,5 @@ form > input {
     background-color: var(--white);
     border-radius: 1.5rem;
     max-width: 830px;
-  }
-
-  .title {
-    font-size: 56px;
   }
 }

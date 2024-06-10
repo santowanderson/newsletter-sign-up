@@ -55,6 +55,11 @@ body {
   min-width: 375px;
 }
 
+.title {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
 @media screen and (min-width: 1024px) {
 
   main {
@@ -63,5 +68,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .title {
+    font-size: 56px;
   }
 }
